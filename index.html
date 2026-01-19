@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MSGRAPHIX | Professional Graphic Design Studio</title>
+
+<meta name="description" content="MSGRAPHIX is a professional graphic design studio offering branding, UI/UX, and digital design solutions.">
+<meta name="keywords" content="Graphic Design, Branding, UI UX, Digital Design">
+<meta name="author" content="MSGRAPHIX">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#ffffff;
+  --text:#1c1e21;
+  --primary:#2563eb;
+  --dark:#020617;
+  --card:#f8fafc;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth;}
+body{font-family:'Inter', Arial, sans-serif;background:var(--bg);color:var(--text);line-height:1.7;}
+
+/* NAVBAR */
+.navbar{background:#ffffff;padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.06);}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px;}
+.logo img{width:45px;}
+.nav-links a{margin-left:24px;text-decoration:none;color:#111;font-size:14px;font-weight:500;}
+.nav-links a:hover{color:var(--primary);}
+
+/* HERO */
+header{background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)), url("https://images.unsplash.com/photo-1529333166437-7750a6dd5a70");background-size:cover;background-position:center;color:#fff;text-align:center;padding:140px 20px;}
+header h1{font-size:52px;font-weight:700;letter-spacing:-1px;}
+header p{max-width:720px;margin:20px auto;font-size:20px;opacity:.95;}
+.btn{display:inline-block;margin:25px 10px;padding:14px 34px;background:var(--primary);color:#fff;text-decoration:none;border-radius:30px;font-weight:600;font-size:15px;box-shadow:0 10px 25px rgba(37,99,235,.35);}
+
+/* SECTIONS */
+section{max-width:1100px;margin:auto;padding:90px 20px;}
+h2{text-align:center;font-size:36px;font-weight:700;margin-bottom:30px;}
+
+/* ABOUT */
+#about p{text-align:center;max-width:800px;margin:auto;color:#475569;font-size:17px;}
+
+/* SERVICES */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+.card{background:var(--card);padding:30px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.08);transition:.3s;}
+.card:hover{transform:translateY(-6px);}
+.card h3{font-weight:600;margin-bottom:10px;}
+
+/* PORTFOLIO */
+.portfolio img{width:100%;border-radius:14px;transition:.4s;cursor:pointer;}
+.portfolio img:hover{transform:scale(1.05);}
+
+/* PORTFOLIO POPUP */
+.popup{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);display:flex;justify-content:center;align-items:center;opacity:0;pointer-events:none;transition:.3s ease;z-index:2000;}
+.popup.show{opacity:1;pointer-events:auto;}
+.popup img{max-width:85%;max-height:85%;border-radius:16px;animation:zoomIn .4s ease;}
+.popup .close{position:absolute;top:25px;right:35px;font-size:34px;color:#fff;cursor:pointer;}
+@keyframes zoomIn{from{transform:scale(.8);opacity:0}to{transform:scale(1);opacity:1}}
+
+/* CONTACT */
+.contact-pro{background:#f8fafc;border-radius:20px;text-align:center;}
+.contact-sub{color:#64748b;margin-bottom:40px;}
+.contact-row{display:flex;justify-content:center;gap:70px;flex-wrap:wrap;}
+.contact-row strong{display:block;margin-bottom:6px;}
+.contact-row a{color:var(--primary);text-decoration:none;font-weight:500;}
+
+/* FOOTER */
+footer{background:var(--dark);color:#94a3b8;padding:50px 20px;text-align:center;font-size:14px;}
+footer a{color:#cbd5f5;text-decoration:none;}
+
+/* SCROLL ANIMATION */
+.fade-up{opacity:0;transform:translateY(40px);transition:.8s ease;}
+.fade-up.show{opacity:1;transform:translateY(0);}
+
+/* MOBILE */
+@media(max-width:768px){
+  header h1{font-size:38px}
+  header p{font-size:18px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/LOGO MS 2026 PNG-01.png" alt="MSGRAPHIX Logo">
+    MSGRAPHIX
+  </div>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<header id="home">
+    <h1>Design That Builds Brands</h1>
+  <p>MSGRAPHIX creates high-impact branding, visuals, and digital experiences crafted to grow modern businesses.</p>
+  <a href="#contact" class="btn">Start a Project</a>
+  <a href="#portfolio" class="btn">View Work</a>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="fade-up">
+  <h2>About Us</h2>
+  <p>MSGRAPHIX is a creative design studio delivering strategic branding, graphic design, and digital solutions that elevate brands and drive results.</p>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="fade-up">
+  <h2>Our Services</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Brand Identity</h3>
+      <p>Logos, brand systems, visual guidelines</p>
+    </div>
+    <div class="card">
+      <h3>Digital Design</h3>
+      <p>Social media, marketing creatives, ads</p>
+    </div>
+    <div class="card">
+      <h3>Print Design</h3>
+      <p>Brochures, packaging, business cards</p>
+    </div>
+    <div class="card">
+      <h3>UI / UX Design</h3>
+      <p>Websites and mobile app interfaces</p>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="fade-up">
+  <h2>Portfolio</h2>
+  <div class="grid portfolio">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/jumma 2025.jpg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/Jumma123.jpg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/jummah-mubarak-25.jpeg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/Ramzan Mubarak 2026-01.jpg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/Qauid e Azam.jpg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/Zohaib.jpg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/Aafia Poster Final-01.jpg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/Aafia Siddiqui.jpg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/Poster  (2).jpg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/IPhone 17.jpg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/techno common.jpg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/Poster  (3).jpg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/watch.jpg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/Shoes.jpg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/shoes 2.jpg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/Fivver Gigs-01.jpg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/Fivver Gigs-02.jpg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/Fivver Gigs-03.jpg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/Reaserch (1).jpg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/Reaserch (3).jpg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/Poster  (1).jpg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/Mudassir design-01.jpg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/Launch.jpg" class="portfolio-img" alt="">
+    <img src="/MSGRAPHIX/MSGRAPHIX-WEBSITE/image/Travel-01.jpg" class="portfolio-img" alt="">
+    <img src="/" class="portfolio-img" alt="">
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-pro fade-up">
+  <h2>Contact MSGRAPHIX</h2>
+  <p class="contact-sub">Let’s collaborate and create something impactful.</p>
+  <div class="contact-row">
+    <div>
+      <strong>📞 Phone</strong>
+      <a href="tel:+923255143703">+92 325 514 3703</a>
+    </div>
+    <div>
+      <strong>✉️ Email</strong>
+      <a href="graphicdesigner504@gmail.com">graphicdesigner504@gmail.com</a>
+    </div>
+    <div>
+      <strong>🌐 Social</strong>
+      <a href="#">Instagram</a> ·
+      <a href="#">Facebook</a> ·
+      <a href="#">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO POPUP -->
+<div class="popup" id="popup">
+  <span class="close" onclick="closePopup()">×</span>
+  <img id="popupImg">
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 MSGRAPHIX. All Rights Reserved.</p>
+  <p><a href="#">Privacy Policy</a> · <a href="#">Terms</a></p>
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+// PORTFOLIO POPUP
+const images = document.querySelectorAll(".portfolio-img");
+const popup = document.getElementById("popup");
+const popupImg = document.getElementById("popupImg");
+
+images.forEach(img=>{
+  img.addEventListener("click",()=>{
+    popup.classList.add("show");
+    popupImg.src = img.src;
+  });
+});
+
+function closePopup(){ popup.classList.remove("show"); }
+popup.addEventListener("click",e=>{ if(e.target === popup) closePopup(); });
+document.addEventListener("keydown",e=>{ if(e.key==="Escape") closePopup(); });
+
+// SCROLL ANIMATIONS
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting) entry.target.classList.add("show");
+  });
+},{threshold:0.15});
+
+document.querySelectorAll(".fade-up").forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
